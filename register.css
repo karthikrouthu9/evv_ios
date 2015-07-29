@@ -1,18 +1,16 @@
 html
 {
-	  margin: 0;
-    	  padding: 0;
 	  height: 100%;
-     	  overflow: hidden;
+     	 overflow-y: scroll;
+	 overflow-x: hidden;
     }
 body {
 	background-image: url("ats_background.jpg");
-    margin: 0;
-    padding: 0;
-   height: 100%;
-    overflow: hidden;
-    background-size: cover;
     
+    height: 100%;
+    background-size: cover;
+    overflow-y: scroll;
+    overflow-x: hidden;
      }
 
 
