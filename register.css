@@ -1,18 +1,14 @@
 html
 {
- margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow: hidden;
-    
-
+	  margin: 0;
+    	  padding: 0;
+	  height: 100%;
+     	  overflow: hidden;
+    }
 body {
-	 margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow: hidden;
 	background-image: url("ats_background.jpg");
-    
+    margin: 0;
+    padding: 0;
    height: 100%;
     overflow: hidden;
     background-size: cover;
