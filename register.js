@@ -61,7 +61,7 @@ function makeCorsRequest_register(username,password,pin)
  var name=username;
  var pass=password;
 
-//var d = document.getElementById("device_uuid");
+var d = document.getElementById("device_uuid");
 
 $.post( "http://183.82.96.212:8080/?q=m_service/m_resources/register_device" , { username:encodeURIComponent(name),password:encodeURIComponent(pass),pin:encodeURIComponent(pin),device_uuid:encodeURIComponent(d.value)}, function( data ) {
 status=data.user.status;
