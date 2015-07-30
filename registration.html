@@ -2,7 +2,9 @@
 <html>
 
 <head>
-<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width/>
+<meta
+  name="viewport"
+  content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
   <meta charset="UTF-8">
 
 		  	<title>Attendance Monitoring System - Login Form</title>
@@ -17,27 +19,27 @@
     		<script type="text/javascript" src="cordova.js"></script>
     		
     		<script>
-    		
-    
-    
-      document.addEventListener("deviceready", onDeviceReady, false);
+    document.addEventListener("deviceready", onDeviceReady, false);
 
     function onDeviceReady() {
-    alert(register device ready);
- 
+  
 		var element = document.getElementById('deviceProperties');
 
        	var device_uuid = device.uuid;
        	var device_model  = device.model;
        	var device_platform =  device.platform;                        
-       	var device_version =  device.version;                       
+       	var device_version =  device.version;    
+       	var width = screen.width
+		var height = screen.height                   
                            
 
        
 document.getElementById('device_uuid').value=device_uuid;
 document.getElementById('device_model').value=device_model;
 document.getElementById('device_platform').value=device_platform;
-document.getElementById('device_version').value=device_version;*/
+document.getElementById('device_version').value=device_version;
+document.getElementById('width').value=device_version;
+document.getElementById('height').value=device_version;
 
     var networkState = navigator.connection.type;
     if (networkState == Connection.NONE)
@@ -81,10 +83,9 @@ document.getElementById("bootstrap").innerHTML = "<div class='alert alert-danger
         
            <input type="hidden" class="form-control input-lg" id="device_uuid"/>
         
-        	   <input type="hidden" class="form-control input-lg" id="device_uuid"/>
-           <input type="hidden" class="form-control input-lg" id="device_model"/>
-           <input type="hidden" class="form-control input-lg" id="device_platform"/>
-           <input type="hidden" class="form-control input-lg" id="device_version"/>
+        	<input type="hidden" class="form-control input-lg" id="device_model"/>
+            <input type="hidden" class="form-control input-lg" id="device_platform"/>
+            <input type="hidden" class="form-control input-lg" id="device_version"/>
  			<div class="pwstrength_viewport_progress"></div>
           
           
