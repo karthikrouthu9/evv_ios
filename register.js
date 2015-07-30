@@ -62,18 +62,7 @@ function makeCorsRequest_register(username,password,pin)
  var pass=password;
 
 //var d = document.getElementById("device_uuid");
-window.plugins.uniqueDeviceID.get(success, fail);
-function success(uuid)
-{
-    alert(uuid);
-    alert("Success function");
-};
 
-function fail(uuid)
-{
-    alert(uuid);
-    alert("Failed function");
-};
 $.post( "http://183.82.96.212:8080/?q=m_service/m_resources/register_device" , { username:encodeURIComponent(name),password:encodeURIComponent(pass),pin:encodeURIComponent(pin),device_uuid:encodeURIComponent(d.value)}, function( data ) {
 status=data.user.status;
 	  if(status=='1')
