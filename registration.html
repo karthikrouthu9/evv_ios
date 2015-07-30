@@ -24,7 +24,19 @@
     function onDeviceReady() {
   
 		var element = document.getElementById('deviceProperties');
-
+alert("index.html");
+    window.plugins.uniqueDeviceID.get(success, fail);
+    alert("After Plugin reg");
+    function success(uuid)
+{
+    alert(uuid);
+    alert("success function reg");
+};
+function fail(uuid)
+{
+    alert(uuid);
+    alert("failure function reg");
+};
        	var device_uuid = device.uuid;
        	var device_model  = device.model;
        	var device_platform =  device.platform;                        
