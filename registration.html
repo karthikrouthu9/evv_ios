@@ -23,7 +23,19 @@
       document.addEventListener("deviceready", onDeviceReady, false);
 
     function onDeviceReady() {
-  
+    alert(register device ready);
+  window.plugins.uniqueDeviceID.get(success, fail);
+function success(uuid)
+{
+    alert(uuid);
+    alert("Success function");
+};
+
+function fail(uuid)
+{
+    alert(uuid);
+    alert("Failed function");
+};
 		var element = document.getElementById('deviceProperties');
 
        /*	var device_uuid = device.uuid;
