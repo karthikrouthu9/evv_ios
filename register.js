@@ -26,8 +26,8 @@ function getTitle(text) {
 
 // Make the actual CORS request.
 function makeCorsRequest() {
-//alert('Device');
-// All HTML5 Rocks properties support CORS.
+
+
   var url = 'http://192.168.0.99:8087/?q=m_service/system/connect.json';
 
   var xhr = createCORSRequest('POST', url);
@@ -62,8 +62,20 @@ function makeCorsRequest_register(username,password,pin)
  var pass=password;
 
 var d = document.getElementById("device_uuid");
+var m = document.getElementById("device_model");
+var p = document.getElementById("device_platform");
+var v = document.getElementById("device_version");
+var w = document.getElementById("width");
+var h = document.getElementById("height");
 
-$.post( "http://183.82.96.212:8080/?q=m_service/m_resources/register_device" , { username:encodeURIComponent(name),password:encodeURIComponent(pass),pin:encodeURIComponent(pin),device_uuid:encodeURIComponent(d.value)}, function( data ) {
+alert(m.value);
+alert(p.value);
+alert(v.value);
+alert(w.value);
+alert(h.value);
+
+
+$.post( "http://183.82.96.212:8080/?q=m_service/m_resources/register_device" , { username:encodeURIComponent(name),password:encodeURIComponent(pass),pin:encodeURIComponent(pin),device_uuid:encodeURIComponent(d.value),device_model:encodeURIComponent(m.value),device_platform:encodeURIComponent(p.value),device_version:encodeURIComponent(v.value),width:encodeURIComponent(w.value),height:encodeURIComponent(h.value)}, function( data ) {
 status=data.user.status;
 	  if(status=='1')
 	 {
