@@ -34,17 +34,17 @@
     // Cordova is loaded and it is now safe to make calls Cordova methods
     //
     function onDeviceReady() {
-    alert("index.html");
+    
     window.plugins.uniqueDeviceID.get(success, fail);
-    alert("After Plugin");
+   
     function success(uuid)
 {
     alert(uuid);
-    alert("success function");
+    
 };
 function fail(uuid)
 {
-    alert(uuid);
+
     alert("failure function");
 };
  $(".se-pre-con").fadeOut("slow");;
