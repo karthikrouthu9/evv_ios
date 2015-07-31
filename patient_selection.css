@@ -1,17 +1,8 @@
-@media (max-width: 300px) {
-    html { font-size: 70%; }
-}
 
-@media (min-width: 500px) {
-    html { font-size: 80%; }
-}
 
-@media (min-width: 700px) {
-    html { font-size: 120%; }
-}
-
-@media (min-width: 1200px) {
-    html { font-size: 200%; }
+@media (max-width: 400px) {
+    span#test { font-size: 70%; }
+    div#test { font-size: 70%; }
 }
 
 body { 
@@ -31,6 +22,18 @@ header{
     text-shadow:0 -1px 0 rgba(0,0,0,0.5);
     line-height:45px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* CSS used here will be applied after bootstrap.css */
