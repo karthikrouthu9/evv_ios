@@ -20,7 +20,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         id        = "web.application.attendancesystem"
         version   = "2.0.0"
-        xmlns:gap="http://phonegap.com/ns/1.0">
+        xmlns:gap = "http://phonegap.com/ns/1.0">
     <name>evv_iOS</name>
 
     <description>
