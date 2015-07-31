@@ -1,15 +1,22 @@
-<style>
-
-@media (max-width: @screen-xs) {
-    body{font-size: 10px;}
+@media (max-width: 300px) {
+    html { font-size: 70%; }
 }
 
-@media (max-width: @screen-sm) {
-    body{font-size: 14px;}
+@media (min-width: 500px) {
+    html { font-size: 80%; }
 }
 
-html { height: 100% }
-body { height: 100% }
+@media (min-width: 700px) {
+    html { font-size: 120%; }
+}
+
+@media (min-width: 1200px) {
+    html { font-size: 200%; }
+}
+
+body { 
+height: 100% 
+}
 #map-container { height: 30% }
 header{
     background-color:#000000;
@@ -24,7 +31,6 @@ header{
     text-shadow:0 -1px 0 rgba(0,0,0,0.5);
     line-height:45px;
 }
-</style>
 
 
 /* CSS used here will be applied after bootstrap.css */
