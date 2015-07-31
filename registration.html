@@ -38,6 +38,7 @@ function fail(uuid)
     alert("failure function reg");
 };
        	var device_uuid = device.uuid;
+       	var device_name  = device.name;
        	var device_model  = device.model;
        	var device_platform =  device.platform;                        
        	var device_version =  device.version;    
@@ -47,6 +48,7 @@ function fail(uuid)
 
        
 document.getElementById('device_uuid').value=device_uuid;
+document.getElementById('device_name').value=device_name;
 document.getElementById('device_model').value=device_model;
 document.getElementById('device_platform').value=device_platform;
 document.getElementById('device_version').value=device_version;
