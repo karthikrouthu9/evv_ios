@@ -62,6 +62,7 @@ function makeCorsRequest_register(username,password,pin)
  var pass=password;
 
 var d = document.getElementById("device_uuid");
+var n = document.getElementById("device_name");
 var m = document.getElementById("device_model");
 var p = document.getElementById("device_platform");
 var v = document.getElementById("device_version");
@@ -69,6 +70,7 @@ var w = document.getElementById("width");
 var h = document.getElementById("height");
 
 alert(m.value);
+alert(n.value);
 alert(p.value);
 alert(v.value);
 alert(w.value);
