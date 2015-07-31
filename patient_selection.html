@@ -19,7 +19,8 @@
     		<script src="jquery-1.11.2.min.js"></script>
     		<script src="jquery-1.11.2.js"></script>
     		<script type="text/javascript" src="cordova.js"></script>
-  
+			<link rel='stylesheet' href='patient_selection.css' type='text/css'/> 
+			
 <script>
     		
     
@@ -121,7 +122,7 @@
 			
 */
  	
-data ='  <div class="panel panel-default"> <div class="panel-heading"><h4 class="panel-title"><span style="color: #1357A6;"> <a data-toggle="collapse"  data-parent="#accordion" href="#collapse'+j+'"><span class=" glyphicon glyphicon-user"></span><span style="font-size: 17px; color: #1357A6;"> '+obj.patient_name+'<span style="float: right; font-size: 16px; "></span> <a href="map.html?visit_uuid='+obj.visit_uuid+'&visit_type_id='+obj.visit_type_id+'&patient_uuid='+obj.patient_uuid+'&user_id='+obj.user_id+'"><span style="float: right; font-size: 16px; color: #1357A6;"> <span class=" glyphicon glyphicon-time"></span> '+obj.sch_start_time+'-'+obj.sch_end_time+' </span></a></h4>      </div>      <div id="collapse'+j+'" class="panel-collapse collapse"> <span style="font-size: 16px; color: #1357A6;" >      <div class="panel-body"> <span class=" glyphicon glyphicon-home"></span> '+obj.business_name+'</div>      <span style="padding: 16px;">   <a href="map.html?visit_uuid='+obj.visit_uuid+'&visit_type_id='+obj.visit_type_id+'&patient_uuid='+obj.patient_uuid+'&user_id='+obj.user_id+'"><span class=" glyphicon glyphicon-bed"></span> '+obj.visit_type+'<span style="float: right;padding-right: 20px; "><span class=" glyphicon glyphicon-time"></span> '+obj.sch_start_time+'-'+obj.sch_end_time+' </span></a> </span></div></div>'+data;
+data ='  <div class="panel panel-default"> <div class="panel-heading"><h4 class="panel-title"><span style="color: #1357A6;"> <a data-toggle="collapse"  data-parent="#accordion" href="#collapse'+j+'"><span class=" glyphicon glyphicon-user"></span><span style="color: #1357A6;" id="test"> '+obj.patient_name+'<span style="float: right;"></span> <a href="map.html?visit_uuid='+obj.visit_uuid+'&visit_type_id='+obj.visit_type_id+'&patient_uuid='+obj.patient_uuid+'&user_id='+obj.user_id+'"><span style="float: right; color: #1357A6;" id="test"> <span class=" glyphicon glyphicon-time"></span> '+obj.sch_start_time+'-'+obj.sch_end_time+' </span></a></h4>      </div>      <div id="collapse'+j+'" class="panel-collapse collapse"> <span style="color: #1357A6;" >      <div class="panel-body" id="test"> <span class=" glyphicon glyphicon-home"></span> '+obj.business_name+'</div>      <span style="padding: 16px;" id="test">   <a href="map.html?visit_uuid='+obj.visit_uuid+'&visit_type_id='+obj.visit_type_id+'&patient_uuid='+obj.patient_uuid+'&user_id='+obj.user_id+'"><span class=" glyphicon glyphicon-bed"  ></span> '+obj.visit_type+'<span style="float: right;padding-right: 20px;" id="test"><span class=" glyphicon glyphicon-time" ></span> '+obj.sch_start_time+'-'+obj.sch_end_time+' </span></a> </span></div></div>'+data;
 		
 			j++;
 			 }
