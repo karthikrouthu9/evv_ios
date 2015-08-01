@@ -1,17 +1,15 @@
-#map-page, #map-canvas { width: 100%; height: 40%; padding: 0; }
-body {
-	background-image: url("ats_background.jpg");
-    
-   
-    background-size: cover;
-    overflow-y: hidden;
-   
 
+
+
+@media (max-width: 400px) {
+ /*span#exampleInputpatientname1 { font-size: 80%; }
+    span#exampleInputvisittype1 { font-size: 69%; }
+    span#exampleInputscheduledtime1 { font-size: 80%; }
+	*/
+	
+	#canvas { width: 250px !important; }
+	button#clear { width: 50px !important; }
+	
 }
-label {
-    /* Other styling.. */
-    text-align: right;
-    clear: both;
-    float:left;
-    margin-right:15px;
-}
+
+
