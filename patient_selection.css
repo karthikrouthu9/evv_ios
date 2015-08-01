@@ -1,7 +1,7 @@
 
 
 @media (max-width: 400px) {
-    span#test { font-size: 70%; }
+    span#test { font-size: 80%; }
     div#test { font-size: 70%; }
 }
 
