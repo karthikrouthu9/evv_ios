@@ -1,43 +1,24 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="UTF-8">
 
 		  	<title>Attendance Monitoring System - Login Form</title>
 			
-			<link rel='stylesheet' href='register.css' type='text/css'/> 
-			<script src="jquery-1.7.min.js"></script>
+		<link rel='stylesheet' href='register.css' type='text/css'/> 
+		<script src="jquery-1.7.min.js"></script>
     		<script src="jquery-1.11.2.js"></script>
-    		
     		<link rel="stylesheet" href="bootstrap-3.3.4/css/bootstrap.min.css" media="screen" type="text/css" />
      		<script src="bootstrap-3.3.4/js/bootstrap.min.js"></script>
-    		
     		<script type="text/javascript" src="cordova.js"></script>
-    		
-
-<script src="bootstrap-3.3.4/js/bootstrap.min.js"></script>
-         <script src="bootbox.js"></script>
-        <script src="bootbox.min.js"></script>
-    		
-    		
+		<script src="bootstrap-3.3.4/js/bootstrap.min.js"></script>
+         	<script src="bootbox.js"></script>
+        	<script src="bootbox.min.js"></script>
     		<script>
-    		
-    
-    
-      document.addEventListener("deviceready", onDeviceReady, false);
-      
-      
-      
-      
-           function onDeviceReady() {
-    			
-  
-      var element = document.getElementById('deviceProperties');
-
-
- 
-       var device_test = device.uuid;
+    document.addEventListener("deviceready", onDeviceReady, false);
+      function onDeviceReady() {
+    var element = document.getElementById('deviceProperties');
+var device_test = device.uuid;
            
 document.getElementById('device_uuid').value=device_test;
 
@@ -57,19 +38,8 @@ document.getElementById("bootstrap").innerHTML = "<div class='alert alert-danger
   }
     else
     {
-
-    			
-      
-      
-	}
-	
-	
-						
-						}
-			
-			
-	
-	
+    }
+      }
 	function device_pin_validation()
 			{
 			if(document.getElementById("new_device_pin").value == "")
