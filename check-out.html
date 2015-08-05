@@ -13,8 +13,6 @@
 	<script src="jquery-1.11.2.min.js"></script>
 	<script src="map.js"></script> 
  	<script src="jquery-1.11.2.js"></script>
-	<link rel='stylesheet' href='map.css' type='text/css'/> 
-	
 	
  	<link href="bootstrap-3.3.4/css/bootstrap.css" rel="stylesheet">
 	<script src="bootstrap-3.3.4/js/bootstrap.min.js"></script>
@@ -23,6 +21,7 @@
 	<script src="bootbox.js"></script>
     <script src="bootbox.min.js"></script>
     	
+
 	
 	
 
@@ -38,20 +37,6 @@ p.dotted {border-bottom-style: inset;border-top-style: none;border-left-style: n
       
       #div_signcontract{ width: 100%; }
 		.popupHeader{ margin: 10px; }
-		html
-{
-	  height: 100%;
-     	 overflow-y: scroll;
-	 overflow-x: hidden;
-    }
-body {
-	background-image: url("ats_background.jpg");
-    
-    height: 100%;
-    background-size: cover;
-    overflow-y: scroll;
-    overflow-x: hidden;
-     }
 		
       </style>
     
@@ -102,11 +87,15 @@ body {
 			
 			}
 		
+		
+		
+		
+		
 		function get_visit_details()	
 	 {
 
 			
-	var json = '{    "patient_uuid" : "74125896321456987532145698521458",   "patient_name"   : "Jane Johnson","agency_name"   : "Logos Health Agency","visit_type": "ST Reevaluation",	"visit_uuid": "11325896321456987532145698521456",	"sch_start_time":"10:00",	"sch_end_time":"11:30", "checked_in_time": "11:36:45"}';
+	var json = '{    "patient_uuid" : "74125896321456987532145698521458",   "patient_name"   : "Jane Johnson","agency_name"   : "Logos Health Agency","visit_type": "ST Re-evaluation",	"visit_uuid": "11325896321456987532145698521456",	"sch_start_time":"10:00",	"sch_end_time":"11:30", "checked_in_time": "11:36:45"}';
 	obj = JSON.parse(json);
 
 	$('input#exampleInputpatientname1').val(obj.patient_name);
@@ -512,9 +501,7 @@ color: black;
     
 "></span></b><br></p></td></tr></table>
 </span>
-<span class="col-md-6 col-xs-6 col-sm-6" style="
-    padding: 0px;
-">
+<span class="col-md-6 col-xs-6 col-sm-6">
 <table><tr><td style="padding-right: 8px; font-size: 22px; color: #1357A6;"><span class=" glyphicon glyphicon-time"></span></td><td style="width: 100%;"><b><p class="dotted "><span  class="col-md-12 col-xs-12 col-sm-12 " ><span id="exampleInputscheduledtime1" style="
     margin-left: -16px;color: #1357A6; width: 148px;
     
@@ -578,7 +565,7 @@ color: black;
     position: relative;
     top: -11px; right: 19px;
 ">
-				<span class="col-sm-12 col-xs-12 col-md-12 col-lg-12" style="top: 19px; margin-left: -1px;">		<button type="button" class="btn btn-primary btn-xs " id="clear"onclick="init_Sign_Canvas()" style="
+				<span class="col-sm-12 col-xs-12 col-md-12 col-lg-12" style="top: 19px; margin-left: -1px;">		<button type="button" class="btn btn-primary btn-xs " onclick="init_Sign_Canvas()" style="
     margin-left: 258px;
 ">Clear</button>
 		</span>
