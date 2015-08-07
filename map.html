@@ -129,13 +129,27 @@ color: black;
 				var imgData = canvas.toDataURL();
 				alert(imgData);			
 				
-				jQuery('#page').find('p').remove();
+			/*	jQuery('#page').find('p').remove();
 				jQuery('#page').find('img').remove();
 				jQuery('#page').append(jQuery('<p>:</p>'));
-				jQuery('#page').append($('<img/>').attr('src',imgData));
+				jQuery('#page').append($('<img/>').attr('src',imgData));*/
 				
 				closePopUp();
 			} else {
+				
+				bootbox.dialog({
+  message: "Signature box cannot be empty",
+  title: "Message",
+  buttons: {
+    success: {
+      label: "OK",
+      className: "btn-error",
+      callback: function() {
+  }
+  }
+  }
+}); 
+return false;
 			}
 		}
 		
@@ -363,10 +377,10 @@ window.onload = function(){date()}, setInterval(function(){date()}, 1000);
 			var exampleInputexpenses1=$("#exampleInputexpenses1").val();
 	  		if(exampleInputexpenses1 == "")
 			{
-				log({
+				bootbox.dialog({
   				message: "Expenses field cannot be empty",
   				title: "Message",
-  				buttons: {
+ 	 			buttons: {
     			success: {
       			label: "OK",
       			className: "btn-error",
@@ -611,10 +625,7 @@ $('#gobtn').html("Check-In");
 <br>
 <br>
 <h5><span id="style_css" class="col-sm-12 col-xs-12 col-md-12 " style="margin-left: -1px;">
-<b style="
-    position: relative;
-    top: 12px;
-" id="employee_signature">Employee Signature</b></span></h5>
+<b style="position: relative;top: 12px;" id="employee_signature">Employee Signature</b></span></h5>
 				
 <div id="page" data-role="content"><center>
 <div class="col-sm-12 col-xs-12 col-md-9 ">
