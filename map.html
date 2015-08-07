@@ -128,25 +128,14 @@ color: black;
 				var canvas = $("#canvas").get(0);
 				var imgData = canvas.toDataURL();
 				alert(imgData);			
-				/*
+				
 				jQuery('#page').find('p').remove();
 				jQuery('#page').find('img').remove();
 				jQuery('#page').append(jQuery('<p>:</p>'));
-				jQuery('#page').append($('<img/>').attr('src',imgData));*/
+				jQuery('#page').append($('<img/>').attr('src',imgData));
 				
 				closePopUp();
 			} else {
-			bootbox.dialog({
-  message: "Signature box cannot be empty",
-  title: "Message",
-  buttons: {
-    success: {
-      label: "OK",
-      className: "btn-error",
-      callback: function() {
-  }
-  }
-  }
 			}
 		}
 		
