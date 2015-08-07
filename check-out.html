@@ -233,6 +233,7 @@ sec = ("0" + sec).slice(-2);
 	}
 	else
 	{
+		return fun_submit();
 	}
 	/*var visit_uuid = getURLParameters('visit_uuid');
 	var visit_type_id = getURLParameters('visit_type_id');
@@ -241,10 +242,14 @@ sec = ("0" + sec).slice(-2);
 	var device_uuid = device.uuid;
 	var expenses=$('input#exampleInputexpenses1').val();
 	var mileage=$('input#exampleInputmiledge1').val();
+	var imgData=$('input#imgData').val();
+	var latitude=$('input#latitude').val();
+	var longitude=$('input#longitude').val();
+	
 	*/
 	
 	
-		//$.post( "http://192.168.0.99:8087/my_drupal_site/?q=my_services/m_resources/employee_visit_check_out" , { patient_uuid:encodeURIComponent(patient_uuid),visit_uuid:encodeURIComponent(visit_uuid),visit_type_id:encodeURIComponent(visit_type_id),expenses:encodeURIComponent(expenses),mileage:encodeURIComponent(mileage),device_uuid:encodeURIComponent(device_uuid)}, function( data ) {
+		//$.post( "http://192.168.0.99:8087/my_drupal_site/?q=my_services/m_resources/employee_visit_check_out" , { patient_uuid:encodeURIComponent(patient_uuid),visit_uuid:encodeURIComponent(visit_uuid),visit_type_id:encodeURIComponent(visit_type_id),expenses:encodeURIComponent(expenses),mileage:encodeURIComponent(mileage),latitude:encodeURIComponent(latitude), longitude:encodeURIComponent(longitude),imgData:encodeURIComponent(imgData),device_uuid:encodeURIComponent(device_uuid)}, function( data ) {
 			var json ='{"responseCode":"I-20008","result":"0","message": "Check-Out Successfully"}';
 				
 		 // var json ='{"responseCode":"E-10008","result":"1","message": "Check-Out Un-successful"}';
@@ -301,16 +306,30 @@ sec = ("0" + sec).slice(-2);
 			if(isSign) {
 				var canvas = $("#canvas").get(0);
 				var imgData = canvas.toDataURL();
+				alert(imgData);		
+				/*
 				jQuery('#page').find('p').remove();
 				jQuery('#page').find('img').remove();
 				jQuery('#page').append(jQuery('<p>:</p>'));
 				jQuery('#page').append($('<img/>').attr('src',imgData));
-				
+				*/
 				closePopUp();
 			} else {
-				alert('Please sign');
-			}
-		}
+			bootbox.dialog({
+  message: "Signature box cannot be empty",
+  title: "Message",
+  buttons: {
+    success: {
+      label: "OK",
+      className: "btn-error",
+      callback: function() {
+  }
+  }
+  }
+}); 
+	return false;
+	}
+}
 		
 		
 		
