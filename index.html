@@ -66,16 +66,17 @@ document.getElementById("bootstrap").innerHTML = "<div class='alert alert-danger
     }
     else
 {
+	alert("Else Loop");
     	is_device_registered(device_uuid);
  function is_device_registered(device_uuid)
 {
 
- 
+ alert("Before Post");
 
 $.post( "http://183.82.96.212:8080/my_drupal_site/?q=my_services/m_resources/is_device_registered" , { device_uuid:device_uuid}, function( data ) {	 
   if(data>=1)
       {
-          
+          alert("After Post");
      window.location='./log-in.html';
       return false;
       }
